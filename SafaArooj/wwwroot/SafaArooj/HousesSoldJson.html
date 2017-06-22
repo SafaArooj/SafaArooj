@@ -1,0 +1,37 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <a href="/SafaArooj"> << Back to start</a>
+        <h3>Edit franchise settings</h3>
+        <fieldset>
+            <label>Name:</label>
+            <input value="{{model.Franchise$.FranchiseName$::input}}">
+        </fieldset>
+        <starcounter-include partial="{{model.Franchise$.FranchiseAddress$}}"></starcounter-include>
+        <br />
+        <button value="{{model.SaveTrigger$::click}}" onmousedown="++this.value">Save</button>
+        <br />
+        <h3>Register new Home for sale</h3>
+        <strong>Home info</strong>
+        <starcounter-include partial="{{model.HouseAddress$}}"></starcounter-include>
+        <strong>Transaction info</strong>
+        <fieldset>
+            <label>Date:</label>
+            <input value="{{model.DateOfTransaction$::input}}">
+        </fieldset>
+        <fieldset>
+            <label>SalePrice:</label>
+            <input value="{{model.SalePrice$::input}}">
+        </fieldset>
+        <fieldset>
+            <label>Commision:</label>
+            <input value="{{model.Comision$::input}}">
+        </fieldset>
+        <br />
+        <button value="{{model.NewSaleTrigger$::click}}" onmousedown="++this.value">Register</button>
+        <br />
+    </template>
+</template>
+
+

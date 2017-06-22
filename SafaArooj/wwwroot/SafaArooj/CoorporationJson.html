@@ -1,0 +1,75 @@
+﻿
+<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+    .wrapper {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .div {
+        height: 60px;
+        width: 33px;
+        display: table-cell;
+    }
+</style>
+
+
+
+<template>
+    <template is="dom-bind">
+        <h4>Welcome</h4>
+        <h5>Create Main Corporation</h5>
+
+        <fieldset>
+            <label>Name</label>
+            <input value="{{model.Name$::input}}" />
+        </fieldset>
+
+        <button value="{{model.CoorporationSave$::click}}" onclick="showFranchises()" onmousedown="++this.value">Save</button>
+
+        <hr />
+
+        <h5>List of Corporations</h5>
+
+        <div id="companyDiv" style="display:none">
+            <h3>{{model.Name$}}</h3>
+            <h4>Franchise offices</h4>
+            <h6>Sort on</h6>
+
+            <button value="{{model.HousesSold$::click}}" onclick="sortFranchises()" onmousedown="++this.value">No. of houses Sold</button>
+            <button value="{{model.TotalCommision$::click}}" onmousedown="++this.value">Total Commision</button>
+            <button value="{{model.AverageCommision$::click}}" onmousedown="++this.value">Average Commision</button>
+            <button value="{{model.Trend$::click}}" onmousedown="++this.value">Trend</button>
+
+            <div class="wrapper">
+                <div class="div"><label>Name</label></div>
+                <div class="div"><label>Number of Houses Sold</label></div>
+                <div class="div"><label>Total commission</label></div>
+                <div class="div"><label>Average Commission</label></div>
+                <div class="div"><label>Trend</label></div>
+            </div>
+
+            <template is="dom-repeat" items="{{model.Franchises}}">
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </template>
+
+            <h5>New Franchise Office</h5>
+            <fieldset>
+                <label>Name:</label>
+                <input value="{{model.FranchiseName$::input}}" />
+            </fieldset>
+
+            <button value="{{model.NewFranchiseOfficeDetails$::click}}" onmousedown="++this.value">Add New Franchise</button>
+        </div>
+    </template>
+</template>
+
+<script>
+
+    function showFranchises() {
+        var x = document.getElementById('companyDiv');
+        x.style.display = 'block';
+    }
+
+</script>

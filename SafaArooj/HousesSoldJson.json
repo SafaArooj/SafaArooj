@@ -1,0 +1,13 @@
+{
+  "Html": "/SafaArooj/HousesSoldJson.html",
+  "HouseAddress$": {},
+  "DateOfTransaction$": "",
+  "SalePrice$": 0,
+  "Comision$": 0,
+  "Franchise$": {
+    "FranchiseName$": "",
+    "FranchiseAddress$": { }
+  },
+  "SaveTrigger$": 0,
+  "NewSaleTrigger$": 0
+}

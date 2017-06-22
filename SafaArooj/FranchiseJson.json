@@ -1,0 +1,13 @@
+{
+  "Html": "/SafaArooj/FranchiseJson.html",
+  "FranchiseName": "",
+  "NoOfHousesSold": 0,
+  "Comision": 0,
+  "AverageCommision": 0,
+  "Trend": 0,
+  "Url": "",
+  "$Url": {
+    "Bind":"GetUrl"
+  }
+
+}
