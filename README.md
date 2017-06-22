@@ -1,13 +1,13 @@
 # SafaArooj
 Star Counter Task 
 
-Project URLs
-Main Page :/SafaArooj
-:"/SafaArooj/Franchise{?}",(string id)
+Project URLS <br/>
+Main Page :/SafaArooj <br/>
+:"/SafaArooj/Franchise{?}",(string id)<br/>
 
-DB classes:
-Coorporation         //To save the parent coorporation
-Franchise            //To save all the multiple branches associated with a Corporation
-Address              //To save the address of Franchise and House
-HousesSold           //To keep track of each taransaction i.e house sale
+DB classes:<br/>
+Coorporation________//To save the parent coorporation<br/><br/>
+Franchise___________//To save all the multiple branches associated with a Corporation<br/>
+Address_____________//To save the address of Franchise and House<br/>
+HousesSold__________//To keep track of each taransaction i.e house sale<br/>
 
